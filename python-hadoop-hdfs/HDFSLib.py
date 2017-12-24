@@ -12,7 +12,7 @@ if __name__ == '__main__':
     timeout：设置的超时时间
     seesion：requests.Session instance, used to emit all requests.（不是太懂，应该四用户发出请求）
     '''
-    client = Client("http://192.168.1.146:50070",root="/",timeout=100,session=False)
+    client = Client("http://192.168.1.111:50070",root="/",timeout=100,session=False)
 
     # dir——查看支持的方法
     print(dir(client))
@@ -39,8 +39,8 @@ if __name__ == '__main__':
      其他参数：makedirs(hdfs_path, permission=None)
                 permission：设置权限
     '''
-    print(client.makedirs("/user/nbfujx/test"))
-    print(client.list("/user/nbfujx/"))
+    print(client.makedirs("/user/nbfujx/"))
+    print(client.list("/user/"))
 
     # rename—重命名
     '''
