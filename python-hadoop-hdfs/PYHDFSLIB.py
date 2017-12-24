@@ -1,7 +1,9 @@
 import pyhdfs
 
 '''
-http://pyhdfs.readthedocs.io/en/latest/pyhdfs.html#pyhdfs.HdfsClient.mkdirs
+http://pyhdfs.readthedocs.io/en/latest/pyhdfs.html
+http://archive.cloudera.com/cdh5/cdh/5/hadoop/hadoop-project-dist/hadoop-hdfs/WebHDFS.html
+https://hadoop.apache.org/docs/current/api/org/apache/hadoop/fs/FileSystem.html
 '''
 
 if __name__ == '__main__':
@@ -31,12 +33,12 @@ if __name__ == '__main__':
 
     #copy_from_local(localsrc, dest, **kwargs) ——上传数据
     #print(fs.copy_from_local('D://迅雷下载/c.txt','/user/nbfujx/testhadoop/c.txt'))
-    print(fs.listdir('/user/nbfujx/testhadoop'))
+    #print(fs.listdir('/user/nbfujx/testhadoop'))
 
     # open(path, **kwargs)
-    #print(fs.open('/user/nbfujx/testhadoop/c.txt'))
+    print(fs.open('/user/nbfujx/testhadoop/c.txt').read())
 
     # copy_to_local(src, localdest, **kwargs) ——下载数据
-    print(fs.copy_to_local('/user/nbfujx/testhadoop/c.txt','D://迅雷下载/d2.txt'))
+    #print(fs.copy_to_local('/user/nbfujx/testhadoop/c.txt','D://迅雷下载/d2.txt'))
 
 
